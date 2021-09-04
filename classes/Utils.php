@@ -26,15 +26,19 @@ namespace local_clickview;
  */
 class Utils {
     /**
-     * @throws \moodle_exception
+     * Returns the ClickView iframe wrapper.
+     *
+     * @param string $singleselect Remove the "Add" button from the ClickView iframe.
+     * @return string
      * @throws \dml_exception
+     * @throws \moodle_exception
      */
-    public static function get_iframe_html(): string {
+    public static function get_iframe_html(string $singleselect = 'false'): string {
         $config = get_config('local_clickview');
 
         $params = [
                 'consumerKey' => $config->consumerkey,
-                'singleSelectMode' => 'true'
+                'singleSelectMode' => $singleselect
         ];
 
         if (!empty($schoolid = $config->schoolid)) {
