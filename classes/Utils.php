@@ -47,6 +47,17 @@ class Utils {
 
         $url = new \moodle_url($config->hostlocation . $config->iframeurl, $params);
 
-        return '<iframe id="clickview_iframe" src="' . $url . '" width="800" height="494" frameborder="0"></iframe>';
+        $iframe = \html_writer::start_tag('iframe', [
+                'class' => 'embed-responsive-item',
+                'id' => 'clickview_iframe',
+                'frameborder' => 0,
+                'height' => '494',
+                'width' => '800',
+                'src' => $url,
+        ]);
+
+        $iframe .= \html_writer::end_tag('iframe');
+
+        return \html_writer::div($iframe, 'embed-responsive embed-responsive-16by9');
     }
 }
