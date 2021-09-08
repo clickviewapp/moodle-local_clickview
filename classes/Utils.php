@@ -25,6 +25,34 @@ namespace local_clickview;
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class Utils {
+
+    /**
+     * Returns the key to identify the platform.
+     *
+     * @return string
+     */
+    public static function get_consumerkey(): string {
+        return '7a71f5b83f13';
+    }
+
+    /**
+     * Returns the link to the CVEvents API JS which allows communicate with the IFrame.
+     *
+     * @return \moodle_url
+     */
+    public static function get_eventsapi_url(): \moodle_url {
+        return new \moodle_url('https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js');
+    }
+
+    /**
+     * Returns the link path to the CV IFrame plugin.
+     *
+     * @return string
+     */
+    public static function get_iframe_url():string {
+        return '/v3/plugins/base';
+    }
+
     /**
      * Returns the ClickView iframe wrapper.
      *
@@ -37,7 +65,7 @@ class Utils {
         $config = get_config('local_clickview');
 
         $params = [
-                'consumerKey' => $config->consumerkey,
+                'consumerKey' => self::get_consumerkey(),
                 'singleSelectMode' => $singleselect
         ];
 
@@ -45,7 +73,7 @@ class Utils {
             $params['schoolId'] = $schoolid;
         }
 
-        $url = new \moodle_url($config->hostlocation . $config->iframeurl, $params);
+        $url = new \moodle_url($config->hostlocation . self::get_iframe_url(), $params);
 
         $iframe = \html_writer::start_tag('iframe', [
                 'class' => 'embed-responsive-item',

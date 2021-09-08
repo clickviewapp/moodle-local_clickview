@@ -42,40 +42,11 @@ if ($hassiteconfig) {
         $setting = new admin_setting_configselect($name, $displayname, $description, 1, $locations);
         $settings->add($setting);
 
-        $name = 'local_clickview/consumerkey';
-        $displayname = new lang_string('consumerkey', 'local_clickview');
-        $description = new lang_string('consumerkey_desc', 'local_clickview');
-        $setting = new admin_setting_configpasswordunmask($name, $displayname, $description, '7a71f5b83f13');
-        $settings->add($setting);
-        $settings->hide_if('local_clickview/consumerkey', 'local_clickview/hostlocation', 'neq', '');
-
         $name = 'local_clickview/schoolid';
         $displayname = new lang_string('schoolid', 'local_clickview');
         $description = new lang_string('schoolid_desc', 'local_clickview');
         $setting = new admin_setting_configpasswordunmask($name, $displayname, $description, '');
         $settings->add($setting);
-
-        $name = 'local_clickview/eventsapi';
-        $displayname = new lang_string('eventsapi', 'local_clickview');
-        $description = new lang_string('eventsapi_desc', 'local_clickview');
-        $setting = new admin_setting_configtext($name, $displayname, $description,
-                'https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js');
-        $settings->add($setting);
-        $settings->hide_if('local_clickview/eventsapi', 'local_clickview/hostlocation', 'neq', '');
-
-        $name = 'local_clickview/shareplayembedurl';
-        $displayname = new lang_string('shareplayembedurl', 'local_clickview');
-        $description = new lang_string('shareplayembedurl_desc', 'local_clickview');
-        $setting = new admin_setting_configtext($name, $displayname, $description, '/Share/PlayEmbed');
-        $settings->add($setting);
-        $settings->hide_if('local_clickview/shareplayembedurl', 'local_clickview/hostlocation', 'neq', '');
-
-        $name = 'local_clickview/iframeurl';
-        $displayname = new lang_string('iframeurl', 'local_clickview');
-        $description = new lang_string('iframeurl_desc', 'local_clickview');
-        $setting = new admin_setting_configtext($name, $displayname, $description, '/v3/plugins/base');
-        $settings->add($setting);
-        $settings->hide_if('local_clickview/iframeurl', 'local_clickview/hostlocation', 'neq', '');
     }
 
     $ADMIN->add('localplugins', $settings);
