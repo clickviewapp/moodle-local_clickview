@@ -15,23 +15,23 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for local_pluginsfetcher
+ * Privacy Subsystem implementation for local_clickview
  *
- * @package    local_pluginsfetcher
- * @copyright  2019 Adrian Perez <p.adrian@gmx.ch> {@link https://adrianperez.me}
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     local_clickview
+ * @copyright   2021 ClickView Pty. Limited <info@clickview.com.au>
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace local_pluginsfetcher\privacy;
+namespace local_clickview\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Privacy Subsystem for local_pluginsfetcher implementing null_provider.
+ * Privacy Subsystem for local_clickview implementing null_provider.
  *
- * @package    local_pluginsfetcher
- * @copyright  2019 Adrian Perez <p.adrian@gmx.ch> {@link https://adrianperez.me}
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     local_clickview
+ * @copyright   2021 ClickView Pty. Limited <info@clickview.com.au>
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements
     // This plugin does not store any personal user data.
