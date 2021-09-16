@@ -1,8 +1,10 @@
 # Moodle ClickView settings plugin #
 
-TODO Describe the plugin shortly here.
+[![Moodle Plugin CI](https://github.com/clickviewapp/moodle-local_clickview/actions/workflows/moodle-ci.yml/badge.svg?branch=main)](https://github.com/clickviewapp/moodle-local_clickview/actions/workflows/moodle-ci.yml)
 
-TODO Provide more detailed description here.
+The ClickView settings plugin for Moodle enables you to configure and setup ClickView in Moodle.
+
+This makes it possible to embed educational videos with the various plugins into your courses and text areas. It is necessary to use the [mod_clickview](https://github.com/clickviewapp/moodle-mod_clickview), [atto_clickview](https://github.com/clickviewapp/moodle-atto_clickview) or [tinymce_clickview](https://github.com/clickviewapp/moodle-tinymce_clickview) plugin.
 
 ## Installing via uploaded ZIP file ##
 
