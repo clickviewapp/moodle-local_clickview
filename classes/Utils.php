@@ -32,7 +32,7 @@ class Utils {
      * @return string
      */
     public static function get_consumerkey(): string {
-        return '7a71f5b83f13';
+        return 'mj4n127fbam2';
     }
 
     /**
