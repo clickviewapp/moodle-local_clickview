@@ -24,8 +24,6 @@
 
 namespace local_clickview\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for local_clickview implementing null_provider.
  *
