@@ -65,7 +65,7 @@ jobs:
 
       - name: PHP Lint
         if: ${{ always() }}
-        run: moodle-plugin-ci phplint ./plugin
+        run: moodle-plugin-ci phplint
 
       - name: PHP Copy/Paste Detector
         continue-on-error: true # This step will show errors but will not fail
@@ -79,31 +79,31 @@ jobs:
 
       - name: Moodle Code Checker
         if: ${{ always() }}
-        run: moodle-plugin-ci phpcs --max-warnings 0 ./plugin
+        run: moodle-plugin-ci phpcs --max-warnings 0
 
       - name: Moodle PHPDoc Checker
         if: ${{ always() }}
-        run: moodle-plugin-ci phpdoc ./plugin
+        run: moodle-plugin-ci phpdoc
 
       - name: Validating
         if: ${{ always() }}
-        run: moodle-plugin-ci validate ./plugin
+        run: moodle-plugin-ci validate
 
       - name: Check upgrade savepoints
         if: ${{ always() }}
-        run: moodle-plugin-ci savepoints ./plugin
+        run: moodle-plugin-ci savepoints
 
       - name: Mustache Lint
         if: ${{ always() }}
-        run: moodle-plugin-ci mustache ./plugin
+        run: moodle-plugin-ci mustache
 
       - name: Grunt
         if: ${{ always() }}
-        run: moodle-plugin-ci grunt --max-lint-warnings 0 ./plugin
+        run: moodle-plugin-ci grunt --max-lint-warnings 0
 
       - name: PHPUnit tests
         if: ${{ always() }}
-        run: moodle-plugin-ci phpunit --fail-on-warning ./plugin
+        run: moodle-plugin-ci phpunit --fail-on-warning
 
       - name: Behat features
         if: ${{ always() }}
