@@ -28,5 +28,5 @@ $plugin->version = 2021083003;
 $plugin->requires = 2018051700;
 $plugin->component = 'local_clickview';
 $plugin->supported = [35, 405];
-$plugin->release = 'v3.5-r3 - v4.5-r1';
+$plugin->release = 'v3.5-r4 - v4.5-r2';
 $plugin->maturity = MATURITY_STABLE;
