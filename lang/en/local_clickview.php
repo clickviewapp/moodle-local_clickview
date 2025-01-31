@@ -26,9 +26,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'ClickView';
-$string['settings'] = 'ClickView settings';
 $string['hostlocation'] = 'Host location';
+$string['settings'] = 'ClickView settings';
 $string['hostlocation_desc'] = 'You should select a host location appropriate to your geographic region otherwise your users will not be able to sign into our platform.';
+$string['privacy:metadata'] = 'The ClickView plugin does not store any personal data.';
 $string['schoolid'] = 'Single Sign On (SSO)';
 $string['schoolid_desc'] = 'If a school ID (GUID) is provided the plugin will redirect to their SSO login page when authentication with our plugin. The plugin will still function normally if the ID is incorrect, taking the user to the default sign in page rather than the expected SSO page.';
-$string['privacy:metadata'] = 'The ClickView plugin does not store any personal data.';

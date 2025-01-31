@@ -49,7 +49,7 @@ class Utils {
      *
      * @return string
      */
-    public static function get_iframe_url():string {
+    public static function get_iframe_url(): string {
         return '/v3/plugins/base';
     }
 
@@ -66,7 +66,7 @@ class Utils {
 
         $params = [
                 'consumerKey' => self::get_consumerkey(),
-                'singleSelectMode' => $singleselect
+                'singleSelectMode' => $singleselect,
         ];
 
         if (!empty($schoolid = $config->schoolid)) {
