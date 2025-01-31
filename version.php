@@ -24,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2021083004;
+$plugin->version = 2021083005;
 $plugin->requires = 2018051700;
 $plugin->component = 'local_clickview';
 $plugin->supported = [35, 405];
-$plugin->release = 'v3.5-r4 - v4.5-r2';
+$plugin->release = 'v3.5-r5 - v4.5-r3';
 $plugin->maturity = MATURITY_STABLE;
